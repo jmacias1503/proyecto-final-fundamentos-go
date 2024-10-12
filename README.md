@@ -13,6 +13,7 @@ Este proyecto tiene como finalidad simular un sistema de control escolar
 - [Despliegue](#despliegue)
     - [Contenedor de Docker](#contenedor-de-docker)
     - [Proyecto](#proyecto)
+- [Workflow](#workflow)
 
 ## Requerimientos
 
@@ -70,3 +71,7 @@ Entrando a la carpeta `cmd/`, ejecutar
 ```bash
 $ go run main.go
 ```
+
+## Workflow
+
+Se trabajará con forks, cada quien trabajará a su respectiva comodidad, y al momento de hacer Pull Request, se enviarán a la rama `dev` hasta ser ese mismo código testeado
