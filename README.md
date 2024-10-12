@@ -1,5 +1,9 @@
 # Proyecto Final Fundamentos de Go
 
+<p align="center">
+<img src="https://github.com/egonelbre/gophers/blob/master/.thumb/animation/gopher-dance-long-3x.gif">
+</p>
+
 Este proyecto tiene como finalidad simular un sistema de control escolar
 
 ## Contenidos
