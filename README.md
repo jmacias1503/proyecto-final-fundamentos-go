@@ -18,6 +18,8 @@ Este proyecto tiene como finalidad simular un sistema de control escolar
     - [Contenedor de Docker](#contenedor-de-docker)
     - [Proyecto](#proyecto)
 - [Workflow](#workflow)
+    - [Estructura de archivos](#estructura-de-archivos)
+    - [Estructura de commits](#estructura-de-commits)
 
 ## Requerimientos
 
@@ -79,3 +81,23 @@ $ go run main.go
 ## Workflow
 
 Se trabajará con forks, cada quien trabajará a su respectiva comodidad, y al momento de hacer Pull Request, se enviarán a la rama `dev` hasta ser ese mismo código testeado
+
+### Estructura de archivos
+
+Se seguirá la siguiente estructura de archivos
+
+```
+- go.mod
+- go.sum
+- Dockerfile
+cmd/
+    - main.go
+    controllers/
+        - controllerName.go
+    templates/
+        - index.html
+```
+
+### Estructura de commits
+
+Cada commit será lo más atómico posible, para poder tener mayor trazabilidad y rastrea de bugs. Al momento de hacer una Pull Request, esta se deberá de hacer respecto a un solo concepto, agrupando todos estos commits que interactuan entre estos. Tomar como referencia [este artículo sobre cómo escribir commits](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)
