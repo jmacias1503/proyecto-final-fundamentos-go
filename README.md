@@ -4,7 +4,7 @@ Este proyecto tiene como finalidad simular un sistema de control escolar
 
 ## Contenidos
 
-- [Requerimiientos](#requerimientos)
+- [Requerimientos](#requerimientos)
     - [Estudiantes](#estudiantes)
     - [Materias](#materias)
     - [Calificaciones](#calificaciones)
