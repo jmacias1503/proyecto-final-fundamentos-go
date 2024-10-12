@@ -44,7 +44,7 @@ El proyecto tiene que consistir de un CRUD que guarde los datos en una base de d
 
 ### Diagrama de entidad relación
 
-Para poder tener una mejor visión sobre las entidades que se van a necesitar en el CRUD, se diseñó un [diagrama de entidad relación](https://dbdiagram.io/d/670aadf997a66db9a3c21c56)
+Para poder tener una mejor visión sobre las entidades que se van a necesitar en el CRUD, se diseñó un [diagrama de entidad relación](https://dbdiagram.io/d/erd-proyecto-final-fundamentos-go-670aadf997a66db9a3c21c56)
 
 ## Stack
 
