@@ -1,4 +1,4 @@
-module proyecto-final-fundamentos-go
+module github.com/jmacias1503/proyecto-final-fundamentos-go
 
 go 1.23.2
 
