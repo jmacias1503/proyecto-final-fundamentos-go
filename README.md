@@ -96,6 +96,8 @@ cmd/
         - controllerName.go
     templates/
         - index.html
+    config/
+        - env.go
 ```
 
 ### Estructura de commits
