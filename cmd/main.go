@@ -19,6 +19,7 @@ type Subject struct {
 
 // Estructura de estudiantes
 type Student struct {
+	gorm.Model
 	Id    int    `json:"student_id" gorm:"primaryKey"`
 	Name  string `json:"name"`
 	Group string `json:"group"`
