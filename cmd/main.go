@@ -67,9 +67,7 @@ func main() {
 		}
 	})
 
-	//---- Student functions ----
-	//Get students
-	router.GET("api/students", func(ctx *gin.Context) {
+	router.GET("/students", func(ctx *gin.Context) {
 		var count int64
 		var students []Student
 		db.Find(&students)
@@ -80,8 +78,7 @@ func main() {
 			"list":  students,
 		})
 	})
-	//Create student
-	router.POST("api/students", func(ctx *gin.Context) {
+	router.POST("/api/students", func(ctx *gin.Context) {
 		var student Student
 		if ctx.BindJSON(&student) == nil {
 			db.Create(&student)
@@ -94,32 +91,20 @@ func main() {
 	})
 	students := []Student{}
 	//Delete student
-	router.DELETE("api/students/:student_id", func(ctx *gin.Context) {
+	router.DELETE("/api/students/:student_id", func(ctx *gin.Context) {
 		id := ctx.Param("student_id")
-		for i, student := range students {
-			if strconv.Itoa(student.Id) == id { // Estará bien esto???
-				students = append(students[:i], students[i+1])
-				db.Delete(&students)
-				ctx.JSON(200, gin.H{
-					"message": "User deleted.",
-				})
-				return
-			}
-		}
+		err := db.Delete(&User{}, id)
+		if err != nil {
 		ctx.JSON(http.StatusNotFound, gin.H{
 			"message": "User not found.",
 		})
+		}
 	})
 	//Get singular student
-	router.GET("api/students/:student_id", func(ctx *gin.Context) {
+	router.GET("/api/students/:student_id", func(ctx *gin.Context) {
+		var user User
 		id := ctx.Param("student_id")
-		for i, student := range students {
-			if strconv.Itoa(student.Id) == id {
-				students[i] = student
-				db.Find(&student)
-				ctx.JSON(200, student)
-			}
-		}
+		err := db.First(&user, id).Error
 	})
 	// Update student
 	router.PUT("api/students/:student_id", func(ctx *gin.Context) {
